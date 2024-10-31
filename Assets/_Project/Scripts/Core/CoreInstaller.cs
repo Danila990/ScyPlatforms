@@ -4,7 +4,6 @@ using VContainer.Unity;
 
 namespace MyCode.Core
 {
-    [CreateAssetMenu(menuName = "CoreInstaller", fileName = nameof(CoreInstaller))]
     public class CoreInstaller : MonoInstaller
     {
         [SerializeField] private GameDatabase _database;

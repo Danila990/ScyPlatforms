@@ -5,22 +5,11 @@ namespace MyCode.Core
     [CreateAssetMenu(menuName = "GameDatabase", fileName = nameof(GameDatabase))]
     public class GameDatabase : ScriptableObject, IDatabase
     {
-        [SerializeField] private DataContainer<GameObject> _objects;
-        [SerializeField] private DataContainer<ScriptableObject> _scriptableObject;
+        [SerializeField] private ObjectContainer<Object> _container;
 
-        public GameObject GetObject(string key)
+        public T GetData<T>(string key) where T : Object
         {
-            return _objects.GetData(key);
-        }
-
-        public T GetObject<T>(string key) where T : MonoBehaviour
-        {
-            return GetObject(key).GetComponent<T>();
-        }
-
-        public T GetSO<T>(string key) where T : ScriptableObject
-        {
-            return (T)_scriptableObject.GetData(key);
+            return (T)_container.GetData(key);
         }
     }
 }

@@ -22,7 +22,7 @@ namespace MyCode.Core
 
         public GameObject CreateObject(string key, Vector3 position = default, bool isActive = true)
         {
-            var createObject = Object.Instantiate(_database.GetObject(key));
+            var createObject = Object.Instantiate(_database.GetData<GameObject>(key));
             createObject.transform.position = position;
             createObject.gameObject.SetActive(isActive);
             _objectResolver.Inject(createObject);
