@@ -13,4 +13,7 @@ MonoBehaviour:
   m_Name: GameDatabase
   m_EditorClassIdentifier: 
   _container:
-    _objectsData: []
+    _objectsData:
+    - Key: Cell_Default
+      Data: {fileID: 8445781404227787116, guid: dcc53973247f01f4c9a5b040bfc38170,
+        type: 3}

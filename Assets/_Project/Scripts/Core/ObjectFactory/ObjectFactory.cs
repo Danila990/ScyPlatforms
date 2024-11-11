@@ -15,14 +15,15 @@ namespace MyCode.Core
             _objectResolver = objectResolver;
         }
 
-        public T CreateObject<T>(string key, Vector3 position = default, bool isActive = true) where T : MonoBehaviour
+        public T CreateObject<T>(string key, Vector3 position = default, Transform parent = null, bool isActive = true) where T : MonoBehaviour
         {
-            return CreateObject(key, position, isActive).GetComponent<T>();
+            return CreateObject(key, position, parent, isActive).GetComponent<T>();
         }
 
-        public GameObject CreateObject(string key, Vector3 position = default, bool isActive = true)
+        public GameObject CreateObject(string key, Vector3 position = default, Transform parent = null, bool isActive = true)
         {
             var createObject = Object.Instantiate(_database.GetData<GameObject>(key));
+            createObject.transform.parent = parent;
             createObject.transform.position = position;
             createObject.gameObject.SetActive(isActive);
             _objectResolver.Inject(createObject);

@@ -215,17 +215,17 @@ namespace TMPro.Examples
                    // Ascent Line
                    labelPosition = m_Transform.TransformPoint(new Vector3(center, ascentline, 0));
                    style.alignment = TextAnchor.UpperCenter;
-                   Handles.Label(labelPosition, "Ascent Line", style);
+                   Handles.Label(labelPosition, "Ascent Cells", style);
                    //Handles.Label(labelPosition, "Ascent Line (" + ascentlineMetrics.ToString("f3") + ")" , style);
 
                    // Base Line
                    labelPosition = m_Transform.TransformPoint(new Vector3(center, baseline, 0));
-                   Handles.Label(labelPosition, "Base Line", style);
+                   Handles.Label(labelPosition, "Base Cells", style);
                    //Handles.Label(labelPosition, "Base Line (" + baselineMetrics.ToString("f3") + ")" , style);
 
                    // Descent line
                    labelPosition = m_Transform.TransformPoint(new Vector3(center, descentline, 0));
-                   Handles.Label(labelPosition, "Descent Line", style);
+                   Handles.Label(labelPosition, "Descent Cells", style);
                    //Handles.Label(labelPosition, "Descent Line (" + descentlineMetrics.ToString("f3") + ")" , style);
 
                    if (characterInfo.isVisible)
@@ -233,13 +233,13 @@ namespace TMPro.Examples
                        // Cap Line
                        labelPosition = m_Transform.TransformPoint(new Vector3(center, capline, 0));
                        style.alignment = TextAnchor.UpperCenter;
-                       Handles.Label(labelPosition, "Cap Line", style);
+                       Handles.Label(labelPosition, "Cap Cells", style);
                        //Handles.Label(labelPosition, "Cap Line (" + caplineMetrics.ToString("f3") + ")" , style);
 
                        // Mean Line
                        labelPosition = m_Transform.TransformPoint(new Vector3(center, meanline, 0));
                        style.alignment = TextAnchor.UpperCenter;
-                       Handles.Label(labelPosition, "Mean Line", style);
+                       Handles.Label(labelPosition, "Mean Cells", style);
                        //Handles.Label(labelPosition, "Mean Line (" + ascentlineMetrics.ToString("f3") + ")" , style);
 
                        // Origin
@@ -532,15 +532,15 @@ namespace TMPro.Examples
                     labelPosition = m_Transform.TransformPoint(new Vector3(lineBottomLeft, ascentline, 0));
                     style.padding = new RectOffset(0, 10, 0, 5);
                     style.alignment = TextAnchor.MiddleRight;
-                    Handles.Label(labelPosition, "Ascent Line", style);
+                    Handles.Label(labelPosition, "Ascent Cells", style);
 
                     // Base Line
                     labelPosition = m_Transform.TransformPoint(new Vector3(lineBottomLeft, baseline, 0));
-                    Handles.Label(labelPosition, "Base Line", style);
+                    Handles.Label(labelPosition, "Base Cells", style);
 
                     // Descent line
                     labelPosition = m_Transform.TransformPoint(new Vector3(lineBottomLeft, descentline, 0));
-                    Handles.Label(labelPosition, "Descent Line", style);
+                    Handles.Label(labelPosition, "Descent Cells", style);
                 }
             }
         }
